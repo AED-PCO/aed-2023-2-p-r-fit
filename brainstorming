@@ -1,0 +1,14 @@
+Tela de login com CPF e senha cadastrada do usuário
+    Com a opção de realizar cadastro
+Tela de cadastro usuários: Nome completo, e-mail, cpf, cargo, unidade.
+
+Premissas da tela pós login:
+    Permitir cadastrar novos alunos
+    Permitir editar os dados dos alunos
+    Permitir excluir o cadastro de alunos
+    Permitir visualizar todos os alunos
+    Permitir filtrar a lista de alunos por: Unidade, Ordem alfabética.
+
+
+Tela de cadastro de aluno: Nome completo, e-mail, telefone, endereço, data de nascimento, peso, unidade.
+    
