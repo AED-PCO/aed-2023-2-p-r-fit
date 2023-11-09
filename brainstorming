@@ -10,5 +10,5 @@ Premissas da tela pós login:
     Permitir filtrar a lista de alunos por: Unidade, Ordem alfabética.
 
 
-Tela de cadastro de aluno: Nome completo, e-mail, telefone, endereço, data de nascimento, peso, unidade.
+Tela de cadastro de aluno: Nome completo, e-mail, telefone, endereço, data de nascimento, peso, altura, idade, unidade.
     
