@@ -67,6 +67,7 @@
             Name = "F_menu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "F_menu";
+            Load += F_menu_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

@@ -30,16 +30,10 @@
         {
             dataGridView1 = new DataGridView();
             label13 = new Label();
-            txt_cpf = new TextBox();
             cb_sexo = new ComboBox();
             cb_unidade = new ComboBox();
-            txt_dataCadastro = new TextBox();
             txt_idade = new TextBox();
-            txt_altura = new TextBox();
-            txt_peso = new TextBox();
-            txt_dataNascimento = new TextBox();
             txt_endereco = new TextBox();
-            txt_telefone = new TextBox();
             txt_email = new TextBox();
             txt_nome = new TextBox();
             label12 = new Label();
@@ -56,6 +50,14 @@
             label1 = new Label();
             btn_inserir = new Button();
             btn_serealizarLista = new Button();
+            mtb_cpf = new MaskedTextBox();
+            mtb_telefone = new MaskedTextBox();
+            mtb_dataNascimento = new MaskedTextBox();
+            mtb_altura = new MaskedTextBox();
+            mtb_peso = new MaskedTextBox();
+            mtb_dataCadastro = new MaskedTextBox();
+            btn_Ordenar = new Button();
+            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -65,7 +67,7 @@
             dataGridView1.Dock = DockStyle.Bottom;
             dataGridView1.Location = new Point(0, 504);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(800, 150);
+            dataGridView1.Size = new Size(836, 150);
             dataGridView1.TabIndex = 1;
             // 
             // label13
@@ -76,13 +78,6 @@
             label13.Size = new Size(28, 15);
             label13.TabIndex = 49;
             label13.Text = "CPF";
-            // 
-            // txt_cpf
-            // 
-            txt_cpf.Location = new Point(354, 42);
-            txt_cpf.Name = "txt_cpf";
-            txt_cpf.Size = new Size(221, 23);
-            txt_cpf.TabIndex = 48;
             // 
             // cb_sexo
             // 
@@ -102,13 +97,6 @@
             cb_unidade.Size = new Size(221, 23);
             cb_unidade.TabIndex = 46;
             // 
-            // txt_dataCadastro
-            // 
-            txt_dataCadastro.Location = new Point(354, 311);
-            txt_dataCadastro.Name = "txt_dataCadastro";
-            txt_dataCadastro.Size = new Size(221, 23);
-            txt_dataCadastro.TabIndex = 45;
-            // 
             // txt_idade
             // 
             txt_idade.Location = new Point(354, 248);
@@ -116,40 +104,12 @@
             txt_idade.Size = new Size(221, 23);
             txt_idade.TabIndex = 44;
             // 
-            // txt_altura
-            // 
-            txt_altura.Location = new Point(354, 218);
-            txt_altura.Name = "txt_altura";
-            txt_altura.Size = new Size(221, 23);
-            txt_altura.TabIndex = 43;
-            // 
-            // txt_peso
-            // 
-            txt_peso.Location = new Point(354, 189);
-            txt_peso.Name = "txt_peso";
-            txt_peso.Size = new Size(221, 23);
-            txt_peso.TabIndex = 42;
-            // 
-            // txt_dataNascimento
-            // 
-            txt_dataNascimento.Location = new Point(354, 160);
-            txt_dataNascimento.Name = "txt_dataNascimento";
-            txt_dataNascimento.Size = new Size(221, 23);
-            txt_dataNascimento.TabIndex = 41;
-            // 
             // txt_endereco
             // 
             txt_endereco.Location = new Point(354, 131);
             txt_endereco.Name = "txt_endereco";
             txt_endereco.Size = new Size(221, 23);
             txt_endereco.TabIndex = 40;
-            // 
-            // txt_telefone
-            // 
-            txt_telefone.Location = new Point(354, 101);
-            txt_telefone.Name = "txt_telefone";
-            txt_telefone.Size = new Size(221, 23);
-            txt_telefone.TabIndex = 39;
             // 
             // txt_email
             // 
@@ -164,6 +124,7 @@
             txt_nome.Name = "txt_nome";
             txt_nome.Size = new Size(221, 23);
             txt_nome.TabIndex = 37;
+            txt_nome.TextChanged += txt_nome_TextChanged;
             // 
             // label12
             // 
@@ -284,7 +245,7 @@
             // 
             // btn_serealizarLista
             // 
-            btn_serealizarLista.Location = new Point(462, 388);
+            btn_serealizarLista.Location = new Point(513, 388);
             btn_serealizarLista.Name = "btn_serealizarLista";
             btn_serealizarLista.Size = new Size(113, 23);
             btn_serealizarLista.TabIndex = 51;
@@ -292,24 +253,94 @@
             btn_serealizarLista.UseVisualStyleBackColor = true;
             btn_serealizarLista.Click += btn_serealizarLista_Click;
             // 
+            // mtb_cpf
+            // 
+            mtb_cpf.Location = new Point(354, 42);
+            mtb_cpf.Mask = "000.000.000-00";
+            mtb_cpf.Name = "mtb_cpf";
+            mtb_cpf.Size = new Size(221, 23);
+            mtb_cpf.TabIndex = 53;
+            // 
+            // mtb_telefone
+            // 
+            mtb_telefone.Location = new Point(354, 102);
+            mtb_telefone.Mask = "(99) 00000-0000";
+            mtb_telefone.Name = "mtb_telefone";
+            mtb_telefone.Size = new Size(221, 23);
+            mtb_telefone.TabIndex = 55;
+            // 
+            // mtb_dataNascimento
+            // 
+            mtb_dataNascimento.Location = new Point(354, 160);
+            mtb_dataNascimento.Mask = "00/00/0000";
+            mtb_dataNascimento.Name = "mtb_dataNascimento";
+            mtb_dataNascimento.Size = new Size(221, 23);
+            mtb_dataNascimento.TabIndex = 57;
+            mtb_dataNascimento.ValidatingType = typeof(DateTime);
+            // 
+            // mtb_altura
+            // 
+            mtb_altura.Location = new Point(354, 219);
+            mtb_altura.Mask = "0.00";
+            mtb_altura.Name = "mtb_altura";
+            mtb_altura.Size = new Size(221, 23);
+            mtb_altura.TabIndex = 58;
+            // 
+            // mtb_peso
+            // 
+            mtb_peso.Location = new Point(354, 189);
+            mtb_peso.Mask = "00.0";
+            mtb_peso.Name = "mtb_peso";
+            mtb_peso.Size = new Size(221, 23);
+            mtb_peso.TabIndex = 59;
+            // 
+            // mtb_dataCadastro
+            // 
+            mtb_dataCadastro.Location = new Point(354, 311);
+            mtb_dataCadastro.Mask = "00/00/0000";
+            mtb_dataCadastro.Name = "mtb_dataCadastro";
+            mtb_dataCadastro.Size = new Size(221, 23);
+            mtb_dataCadastro.TabIndex = 60;
+            mtb_dataCadastro.ValidatingType = typeof(DateTime);
+            // 
+            // btn_Ordenar
+            // 
+            btn_Ordenar.Location = new Point(354, 388);
+            btn_Ordenar.Name = "btn_Ordenar";
+            btn_Ordenar.Size = new Size(112, 23);
+            btn_Ordenar.TabIndex = 61;
+            btn_Ordenar.Text = "Ordenar";
+            btn_Ordenar.UseVisualStyleBackColor = true;
+            btn_Ordenar.Click += btn_Ordenar_Click;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(659, 216);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 62;
+            // 
             // F_todosUsuarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 654);
+            ClientSize = new Size(836, 654);
+            Controls.Add(comboBox1);
+            Controls.Add(btn_Ordenar);
+            Controls.Add(mtb_dataCadastro);
+            Controls.Add(mtb_peso);
+            Controls.Add(mtb_altura);
+            Controls.Add(mtb_dataNascimento);
+            Controls.Add(mtb_telefone);
+            Controls.Add(mtb_cpf);
             Controls.Add(btn_serealizarLista);
             Controls.Add(btn_inserir);
             Controls.Add(label13);
-            Controls.Add(txt_cpf);
             Controls.Add(cb_sexo);
             Controls.Add(cb_unidade);
-            Controls.Add(txt_dataCadastro);
             Controls.Add(txt_idade);
-            Controls.Add(txt_altura);
-            Controls.Add(txt_peso);
-            Controls.Add(txt_dataNascimento);
             Controls.Add(txt_endereco);
-            Controls.Add(txt_telefone);
             Controls.Add(txt_email);
             Controls.Add(txt_nome);
             Controls.Add(label12);
@@ -328,6 +359,7 @@
             Name = "F_todosUsuarios";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "F_todosUsuarios";
+            Load += F_todosUsuarios_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -336,16 +368,10 @@
         #endregion
         private DataGridView dataGridView1;
         private Label label13;
-        private TextBox txt_cpf;
         private ComboBox cb_sexo;
         private ComboBox cb_unidade;
-        private TextBox txt_dataCadastro;
         private TextBox txt_idade;
-        private TextBox txt_altura;
-        private TextBox txt_peso;
-        private TextBox txt_dataNascimento;
         private TextBox txt_endereco;
-        private TextBox txt_telefone;
         private TextBox txt_email;
         private TextBox txt_nome;
         private Label label12;
@@ -362,5 +388,16 @@
         private Label label1;
         private Button btn_inserir;
         private Button btn_serealizarLista;
+        private MaskedTextBox mtb_cpf;
+        private MaskedTextBox mtb_nome;
+        private MaskedTextBox maskedTextBox2;
+        private MaskedTextBox mtb_telefone;
+        private MaskedTextBox maskedTextBox4;
+        private MaskedTextBox mtb_dataNascimento;
+        private MaskedTextBox mtb_altura;
+        private MaskedTextBox mtb_peso;
+        private MaskedTextBox mtb_dataCadastro;
+        private Button btn_Ordenar;
+        private ComboBox comboBox1;
     }
 }

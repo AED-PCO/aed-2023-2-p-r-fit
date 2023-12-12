@@ -31,5 +31,10 @@ namespace WinFormsApp1
             f_CadastrarUsuario.ShowDialog();
 
         }
+
+        private void F_menu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
