@@ -55,23 +55,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\faelr\\.nuget\\packages\\": {},
+    "C:\\Users\\rhitm\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\faelr\\OneDrive\\Documentos\\AED\\aed-2023-2-p-r-fit\\WinFormsApp1\\WinFormsApp1.csproj",
+      "projectUniqueName": "C:\\Users\\rhitm\\OneDrive\\Documentos\\AED\\P&R-FIT\\WinFormsApp1\\WinFormsApp1.csproj",
       "projectName": "WinFormsApp1",
-      "projectPath": "C:\\Users\\faelr\\OneDrive\\Documentos\\AED\\aed-2023-2-p-r-fit\\WinFormsApp1\\WinFormsApp1.csproj",
-      "packagesPath": "C:\\Users\\faelr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\faelr\\OneDrive\\Documentos\\AED\\aed-2023-2-p-r-fit\\WinFormsApp1\\obj\\",
+      "projectPath": "C:\\Users\\rhitm\\OneDrive\\Documentos\\AED\\P&R-FIT\\WinFormsApp1\\WinFormsApp1.csproj",
+      "packagesPath": "C:\\Users\\rhitm\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rhitm\\OneDrive\\Documentos\\AED\\P&R-FIT\\WinFormsApp1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\faelr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rhitm\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

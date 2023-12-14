@@ -1,30 +1,16 @@
 [
   {
-    "Nome": "Rafael Romagnoli Conforte Cesario",
-    "cpf": "094,588,986-09",
-    "Email": "romagnolirafael1@gmail.com",
-    "Telefone": "(31) 98441-8681",
-    "Edereco": "rua 14, 379",
-    "Nascimento": "01/09/2004",
-    "Peso": "81,4",
-    "Altura": "1,82",
-    "Idade": "19",
-    "Unidade": "Contagem",
-    "Cadastro": "14/12/2023",
-    "Sexo": "Masculino"
-  },
-  {
-    "Nome": "Daniel Romagnoli",
-    "cpf": "094,588,996-80",
-    "Email": "dandanromagnoli@gmail.com",
-    "Telefone": "(31) 99999-9999",
-    "Edereco": "rua 14, 379",
-    "Nascimento": "12/05/2002",
-    "Peso": "72,8",
-    "Altura": "1,75",
-    "Idade": "21",
-    "Unidade": "Praça da liberdade",
-    "Cadastro": "14/12/2023",
-    "Sexo": "Masculino"
+    "Nome": "Falha: Could not find a part of the path 'C:\\Users\\faelr\\OneDrive\\Documentos\\AED\\aed-2023-2-p-r-fit\\arquivo.json'.",
+    "cpf": null,
+    "Email": null,
+    "Telefone": null,
+    "Edereco": null,
+    "Nascimento": null,
+    "Peso": null,
+    "Altura": null,
+    "Idade": null,
+    "Unidade": null,
+    "Cadastro": null,
+    "Sexo": null
   }
 ]

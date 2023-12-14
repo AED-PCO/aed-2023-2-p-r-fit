@@ -21,7 +21,7 @@ namespace WinFormsApp1
             InitializeComponent();
             this.nomeColaborador = nomeColaborador;
             listaUsuarios = Usuarios.JsonDesserializarLista("arquivo.json");
-            listaUsuarios = Usuarios.JsonDesserializarLista(@"C:\\Users\\faelr\\OneDrive\\Documentos\\AED\\aed-2023-2-p-r-fit\\arquivo.json");
+            listaUsuarios = Usuarios.JsonDesserializarLista(@"C:\Users\rhitm\OneDrive\Documentos\AED\P&R-FIT\\arquivo.json");
             dataGridView1.DataSource = listaUsuarios;
 
             btn_excluir.Click += btn_excluir_Click;
@@ -67,7 +67,7 @@ namespace WinFormsApp1
         private void btn_serealizarLista_Click(object sender, EventArgs e)
         {
             var usuario = new Usuarios();
-            usuario.JsonSerializarLista(listaUsuarios, @"C:\\Users\\faelr\\OneDrive\\Documentos\\AED\\aed-2023-2-p-r-fit\\arquivo.json");
+            usuario.JsonSerializarLista(listaUsuarios, @"C:\Users\rhitm\OneDrive\Documentos\AED\P&R-FIT\\arquivo.json");
             if (usuario.JsonSerializarLista(listaUsuarios, "arquivo.json"))
             {
                 MessageBox.Show("Usuários salvos!");
