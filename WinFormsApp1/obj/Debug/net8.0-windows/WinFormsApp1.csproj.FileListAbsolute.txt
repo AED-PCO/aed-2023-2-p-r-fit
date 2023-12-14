@@ -41,3 +41,5 @@ C:\Users\faelr\OneDrive\Documentos\AED\aed-2023-2-p-r-fit\WinFormsApp1\obj\Debug
 C:\Users\faelr\OneDrive\Documentos\AED\aed-2023-2-p-r-fit\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.pdb
 C:\Users\faelr\OneDrive\Documentos\AED\aed-2023-2-p-r-fit\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.genruntimeconfig.cache
 C:\Users\faelr\OneDrive\Documentos\AED\aed-2023-2-p-r-fit\WinFormsApp1\obj\Debug\net8.0-windows\ref\WinFormsApp1.dll
+C:\Users\faelr\OneDrive\Documentos\AED\aed-2023-2-p-r-fit\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.F_colaborador.resources
+C:\Users\faelr\OneDrive\Documentos\AED\aed-2023-2-p-r-fit\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.Properties.Resources.resources

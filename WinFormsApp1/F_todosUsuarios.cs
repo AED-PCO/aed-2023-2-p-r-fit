@@ -14,13 +14,17 @@ namespace WinFormsApp1
 {
     public partial class F_todosUsuarios : Form
     {
-
+        private string nomeColaborador;
         List<Usuarios> listaUsuarios = new List<Usuarios>();
-        public F_todosUsuarios()
+        public F_todosUsuarios(string nomeColaborador)
         {
             InitializeComponent();
-            listaUsuarios = Usuarios.JsonDesserializarLista(@"C:\Users\faelr\OneDrive\Documentos\AED\aed-2023-2-p-r-fit\arquivo.json");
+            this.nomeColaborador = nomeColaborador;
+            listaUsuarios = Usuarios.JsonDesserializarLista("arquivo.json");
+            listaUsuarios = Usuarios.JsonDesserializarLista(@"C:\\Users\\faelr\\OneDrive\\Documentos\\AED\\aed-2023-2-p-r-fit\\arquivo.json");
             dataGridView1.DataSource = listaUsuarios;
+
+            btn_excluir.Click += btn_excluir_Click;
         }
 
 
@@ -63,15 +67,18 @@ namespace WinFormsApp1
         private void btn_serealizarLista_Click(object sender, EventArgs e)
         {
             var usuario = new Usuarios();
-            if (usuario.JsonSerializarLista(listaUsuarios, @"C:\Users\faelr\OneDrive\Documentos\AED\aed-2023-2-p-r-fit\arquivo.json"))
+            usuario.JsonSerializarLista(listaUsuarios, @"C:\\Users\\faelr\\OneDrive\\Documentos\\AED\\aed-2023-2-p-r-fit\\arquivo.json");
+            if (usuario.JsonSerializarLista(listaUsuarios, "arquivo.json"))
             {
-                MessageBox.Show("Salvo");
+                MessageBox.Show("Usuários salvos!");
             }
 
-            F_menu f_menu = new F_menu();
-            f_menu.ShowDialog();
-
             OrdenarUsuariosPorNome();
+            
+            this.Hide();
+            F_menu f_menu = new F_menu(nomeColaborador);
+            f_menu.ShowDialog();
+            this.Close();
         }
 
         private void txt_nome_TextChanged(object sender, EventArgs e)
@@ -100,6 +107,33 @@ namespace WinFormsApp1
         {
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = listaUsuarios;
+        }
+
+        private void btn_voltar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            F_menu f_menu = new F_menu(nomeColaborador);
+            f_menu.ShowDialog();
+            this.Close();
+        }
+
+        private void btn_excluir_Click(object sender, EventArgs e)
+        {
+            if(dataGridView1.SelectedRows.Count > 0)
+            {
+                int selectedIndex = dataGridView1.SelectedRows[0].Index;
+
+                    listaUsuarios.RemoveAt(selectedIndex);
+
+                    AtualizarDataGridView();
+
+                    MessageBox.Show("Usuário excluido com sucesso!");
+             }
+             else
+                {
+                    MessageBox.Show("Selecione um usuário para excluir", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            AtualizarDataGridView();
         }
     }
 }
